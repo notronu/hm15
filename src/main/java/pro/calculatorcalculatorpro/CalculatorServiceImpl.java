@@ -1,17 +1,31 @@
 package pro.calculatorcalculatorpro;
 
-public class CalculatorServiceImpl implements Service{
+import org.springframework.stereotype.Service;
+
+@Service
+public class CalculatorServiceImpl implements CalculatorService {
     @Override
-    public int sum( int num1, int num2){
+    public String hello() {
+        return "Добро пожаловать в калькулятор";
+    }
+
+    @Override
+    public int plus(int num1, int num2) {
         return num1 + num2;
     }
-    public int substract( int num1, int num2){
+
+    @Override
+    public int minus(int num1, int num2) {
         return num1 - num2;
     }
-    public int multiply( int num1, int num2){
+
+    @Override
+    public int multiply(int num1, int num2) {
         return num1 * num2;
     }
-    public int divide( int num1, int num2){
+
+    @Override
+    public int divide(int num1, int num2) {
         return num1 / num2;
     }
 }
